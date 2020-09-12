@@ -1,0 +1,29 @@
+class Base:
+    base=0
+    hight=0
+    def __init__(self,passed_based,passed_hight):
+        self.base=passed_based
+        self.hight=passed_hight
+    def print(self):
+        print(self.base,self.hight)
+
+class Triangle():
+    triagngle_base=0
+    triagngle_hight=0
+
+    def __init__(self):
+        self.__length=200
+    def change_price(self,new_price):
+        self.__length=new_price
+    def get_price(self):
+        return f"Current Price:{self.__length}"
+
+    def value_exchange(self,Base:object):
+        self.triagngle_base=Base.base+10
+#
+base_obj=Base(passed_based=20,passed_hight=30)
+tri_obj=Triangle()
+tri_obj.value_exchange(base_obj)
+print(tri_obj.get_price())
+tri_obj.change_price(300)
+print(tri_obj.get_price())
